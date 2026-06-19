@@ -1,9 +1,9 @@
 ﻿{
     "date":  "2026-06-19",
     "id":  "content-repurpose-mini",
-    "theme":  "一つのメモから投稿を複数作る省力化",
-    "buyer":  "発信したいが毎回書くのが重い人",
-    "product":  "メモから記事、短文投稿、販売導線に変えるプロンプト集",
+    "theme":  "Repurpose one memo into multiple posts",
+    "buyer":  "people who want to post but hate starting from scratch",
+    "product":  "Prompt pack for turning notes into articles, short posts, and sales links",
     "price_yen":  980,
     "files":  [
                   "free_post.md",

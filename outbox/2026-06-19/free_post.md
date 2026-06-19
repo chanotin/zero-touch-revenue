@@ -1,10 +1,10 @@
-﻿# 一つのメモから投稿を複数作る省力化
+﻿# Repurpose one memo into multiple posts
 
 発信したいけど、毎回ゼロから書くのが重い人向けに、小さな作業の型を作りました。
 
-対象は、発信したいが毎回書くのが重い人 です。
+対象は、people who want to post but hate starting from scratch です。
 
-今回のテーマは「メモから記事、短文投稿、販売導線に変えるプロンプト集」です。大きな講座ではなく、手元のメモを無料投稿、短文投稿、販売導線に分けるための実務テンプレです。
+今回のテーマは「Prompt pack for turning notes into articles, short posts, and sales links」です。大きな講座ではなく、手元のメモを無料投稿、短文投稿、販売導線に分けるための実務テンプレです。
 
 発信が止まる理由は、文章力よりも「何に分解すればいいか」が毎回決まっていないことだったりします。
 

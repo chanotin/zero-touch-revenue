@@ -1,4 +1,4 @@
-﻿# メモから記事、短文投稿、販売導線に変えるプロンプト集
+﻿# Prompt pack for turning notes into articles, short posts, and sales links
 
 毎回ゼロから投稿を書くのが重い人向けの、小さな実務テンプレです。
 
@@ -12,7 +12,7 @@
 
 ## 向いている人
 
-発信したいが毎回書くのが重い人
+people who want to post but hate starting from scratch
 
 ## 価格
 
