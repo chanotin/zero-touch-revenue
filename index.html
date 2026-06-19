@@ -597,6 +597,40 @@
     .sample-card pre {
       max-height: 240px;
     }
+    .sample-teaser {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 14px;
+      margin-top: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+    .sample-teaser h2 {
+      margin-top: 0;
+    }
+    .mini-prompt {
+      display: grid;
+      gap: 10px;
+    }
+    .mini-prompt div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fbfcfe;
+    }
+    .mini-prompt strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .mini-prompt p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
     details.full-material {
       margin-top: 14px;
       border: 1px solid var(--line);
@@ -649,6 +683,9 @@
         grid-template-columns: 1fr;
       }
       .deliverables, .steps-list, .sample-grid {
+        grid-template-columns: 1fr;
+      }
+      .sample-teaser {
         grid-template-columns: 1fr;
       }
       .sticky-buy-inner {
