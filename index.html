@@ -8,29 +8,38 @@
   <style>
     :root {
       color-scheme: light;
-      --ink: #1f2933;
+      --ink: #17202e;
       --muted: #667085;
       --line: #d8dee8;
       --paper: #ffffff;
-      --bg: #f6f8fb;
+      --bg: #f3f6f8;
       --accent: #0f766e;
       --accent-soft: #e6f4f1;
+      --gold: #d99a21;
+      --gold-soft: #fff4da;
+      --danger-soft: #fff1f1;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Segoe UI", "Yu Gothic", Meiryo, sans-serif;
       color: var(--ink);
-      background: var(--bg);
+      background:
+        linear-gradient(180deg, #f9fbfb 0, var(--bg) 420px),
+        var(--bg);
       line-height: 1.7;
     }
     header {
-      padding: 32px 20px 20px;
+      padding: 18px 20px;
       border-bottom: 1px solid var(--line);
-      background: var(--paper);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     .wrap {
-      width: min(980px, calc(100% - 32px));
+      width: min(1080px, calc(100% - 32px));
       margin: 0 auto;
     }
     h1, h2 {
@@ -39,7 +48,10 @@
     }
     h1 {
       margin: 0 0 6px;
-      font-size: 28px;
+      font-size: clamp(30px, 4vw, 52px);
+    }
+    header h1 {
+      font-size: 22px;
     }
     h2 {
       margin: 28px 0 10px;
@@ -51,7 +63,7 @@
       font-size: 14px;
     }
     main {
-      padding: 24px 0 44px;
+      padding: 24px 0 64px;
     }
     .grid {
       display: grid;
@@ -63,15 +75,133 @@
       border-radius: 8px;
       padding: 18px;
     }
-    .cover {
-      width: min(360px, 100%);
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+      gap: 28px;
+      align-items: center;
+      padding: 28px;
+      background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
+      box-shadow: 0 18px 50px rgba(23, 32, 46, 0.08);
+    }
+    .hero-copy {
+      display: grid;
+      gap: 14px;
+    }
+    .eyebrow {
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #7a520e;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .hero-title {
+      margin: 0;
+      font-size: clamp(28px, 4.6vw, 56px);
+      line-height: 1.16;
+    }
+    .hero-lead {
+      margin: 0;
+      color: #394455;
+      font-size: 17px;
+    }
+    .price-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .price {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fbfcfe;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .hero-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cover-wrap {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #f7fbfa);
+    }
+    .cover {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
       display: block;
-      margin: 0 0 16px;
+      margin: 0;
     }
     .card .cover {
-      width: min(220px, 100%);
+      width: 100%;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .card-body {
+      min-width: 0;
+    }
+    .card-lead {
+      margin: 0;
+      color: #394455;
+      font-size: 15px;
+    }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0 0;
+    }
+    .value {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfe;
+    }
+    .value strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+    .value p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
     }
     .date {
       color: var(--accent);
@@ -117,11 +247,19 @@
     .button {
       display: inline-flex;
       align-items: center;
-      min-height: 36px;
-      padding: 6px 12px;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 14px;
       border: 1px solid var(--accent);
       border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 10px 26px rgba(15, 118, 110, 0.20);
+    }
+    .button.secondary {
       background: var(--accent-soft);
+      color: var(--accent);
+      box-shadow: none;
     }
     a:hover { text-decoration: underline; }
     .empty {
@@ -134,55 +272,45 @@
       margin: 0 0 14px;
       padding-left: 22px;
     }
+    @media (max-width: 760px) {
+      header { position: static; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      .card {
+        grid-template-columns: 1fr;
+      }
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
       <h1>Small Offer Lab</h1>
-      <p class="lead">小さなデジタル商品の試作置き場. Updated 2026-06-19 17:07:33.</p>
+      <p class="lead">小さなデジタル商品の試作置き場. Updated 2026-06-19 17:18:47.</p>
     </div>
   </header>
   <main class="wrap">
     <section class="grid">
       <article class="card">
-        <img class="cover" src="assets/packages/2026-06-19/cover.png" alt="">
-        <div class="date">2026-06-19</div>
-        <h2>メモを記事・短文投稿・販売導線に変えるプロンプト集</h2>
-        <div class="meta">
-          <span>発信したいけれど、毎回ゼロから書き始めるのが重い人</span>
-          <span>980円</span>
-        </div>
-        <pre># メモを記事・短文投稿・販売導線に変えるプロンプト集
-
-毎回ゼロから投稿を書くのが重い人向けの、小さな実務テンプレです。
-
-## 内容
-
-- メモを投稿に変えるチェックリスト
-- 無料投稿用プロンプト
-- X / Threads 向け短文投稿プロンプト
-- 販売導線に変えるための質問リスト
-- 公開前の確認項目
-
-## 向いている人
-
-発信したいけれど、毎回ゼロから書き始めるのが重い人
-
-## 価格
-
-980円
-
-## 注意
-
-このテンプレは、発信作業を軽くするためのものです。売上、反応、フォロワー増加などを保証するものではありません。
-
-
-</pre>
-        <div class="links">
-          <a href="packages/2026-06-19/index.html">&#35443;&#32048;</a>
-          <a class="button" href="https://small-offer-lab.booth.pm/items/8525311">購入する</a>
-          <a href="outbox/2026-06-19/package.zip">ZIP&#12434;&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;</a>
+        <div class="cover-wrap"><img class="cover" src="assets/packages/2026-06-19/cover.png" alt=""></div>
+        <div class="card-body">
+          <div class="date">2026-06-19</div>
+          <h2>メモを記事・短文投稿・販売導線に変えるプロンプト集</h2>
+          <div class="meta">
+            <span>発信したいけれど、毎回ゼロから書き始めるのが重い人</span>
+            <span>980円</span>
+          </div>
+          <p class="card-lead">&#27598;&#22238;&#12476;&#12525;&#12363;&#12425;&#26360;&#12367;&#37325;&#12373;&#12434;&#12289;&#25237;&#31295;&#12539;&#30701;&#25991;&#12539;&#36009;&#22770;&#23566;&#32218;&#12395;&#20998;&#12369;&#12390;&#36605;&#12367;&#12377;&#12427;&#23567;&#12373;&#12394;&#12486;&#12531;&#12503;&#12524;&#12391;&#12377;&#12290;</p>
+          <div class="links">
+            <a class="button" href="packages/2026-06-19/index.html">&#35443;&#32048;&#12434;&#35211;&#12427;</a>
+            <a class="button" href="https://small-offer-lab.booth.pm/items/8525311">購入する</a>
+            
+          </div>
         </div>
       </article>
     </section>
