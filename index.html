@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Small Offer Lab</title>
+  <meta name="description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 17:34:16.">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Small Offer Lab">
+  <meta property="og:title" content="Small Offer Lab">
+  <meta property="og:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 17:34:16.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Small Offer Lab">
+  <meta name="twitter:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 17:34:16.">
+  <link rel="canonical" href="https://small-offer-lab.vercel.app/">
+  <meta property="og:url" content="https://small-offer-lab.vercel.app/">
+  <meta property="og:image" content="https://small-offer-lab.vercel.app/assets/packages/2026-06-19/cover.png">
+  <meta name="twitter:image" content="https://small-offer-lab.vercel.app/assets/packages/2026-06-19/cover.png">
+
   <style>
     :root {
       color-scheme: light;
@@ -238,6 +251,32 @@
       margin: 0;
       color: var(--muted);
     }
+    .sticky-buy {
+      position: sticky;
+      bottom: 0;
+      z-index: 20;
+      margin: 22px auto 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 -12px 36px rgba(23, 32, 46, 0.09);
+    }
+    .sticky-buy-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sticky-buy strong {
+      display: block;
+      line-height: 1.3;
+    }
+    .sticky-buy span {
+      color: var(--muted);
+      font-size: 13px;
+    }
     .date {
       color: var(--accent);
       font-size: 13px;
@@ -322,6 +361,10 @@
       .compare-grid, .faq-grid {
         grid-template-columns: 1fr;
       }
+      .sticky-buy-inner {
+        align-items: stretch;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -329,7 +372,7 @@
   <header>
     <div class="wrap">
       <h1>Small Offer Lab</h1>
-      <p class="lead">小さなデジタル商品の試作置き場. Updated 2026-06-19 17:27:06.</p>
+      <p class="lead">小さなデジタル商品を試す場所. Updated 2026-06-19 17:34:16.</p>
     </div>
   </header>
   <main class="wrap">
@@ -351,6 +394,15 @@
           </div>
         </div>
       </article>
+    </section>
+    <section class="sticky-buy">
+      <div class="sticky-buy-inner">
+        <div>
+          <strong>Small Offer Lab</strong>
+          <span>980&#20870; / BOOTH&#12391;&#36092;&#20837;</span>
+        </div>
+        <a class="button" href="https://small-offer-lab.booth.pm/items/8525311">購入する</a>
+      </div>
     </section>
   </main>
 </body>
