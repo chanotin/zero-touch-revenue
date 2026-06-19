@@ -280,6 +280,51 @@
       font-size: 13px;
       line-height: 1.55;
     }
+    .preview-flow {
+      margin-top: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf7;
+    }
+    .preview-flow h2 {
+      margin-top: 0;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .preview-step {
+      border: 1px solid #ead9ad;
+      border-radius: 8px;
+      padding: 14px;
+      background: #ffffff;
+    }
+    .preview-step span {
+      display: inline-grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      margin-bottom: 8px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #7a520e;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .preview-step strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .preview-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
     .decision {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -568,6 +613,9 @@
       .compare-grid, .faq-grid {
         grid-template-columns: 1fr;
       }
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
       .decision {
         grid-template-columns: 1fr;
       }
@@ -628,6 +676,16 @@
       <div class="value"><strong>&#12513;&#12514;&#12363;&#12425;&#22987;&#12417;&#12425;&#12428;&#12427;</strong><p>&#25163;&#20803;&#12398;&#31623;&#26465;&#26360;&#12365;&#12434;&#12289;&#25237;&#31295;&#12539;&#30701;&#25991;&#12539;&#36009;&#22770;&#23566;&#32218;&#12395;&#20998;&#12369;&#12414;&#12377;&#12290;</p></div>
       <div class="value"><strong>&#12381;&#12398;&#26085;&#12395;&#20351;&#12360;&#12427;</strong><p>&#12503;&#12525;&#12531;&#12503;&#12488;&#12392;&#30906;&#35469;&#38917;&#30446;&#12434;ZIP&#12391;&#12414;&#12392;&#12417;&#12390;&#21463;&#12369;&#21462;&#12428;&#12414;&#12377;&#12290;</p></div>
       <div class="value"><strong>&#22770;&#12426;&#36796;&#12415;&#36942;&#22810;&#12395;&#12375;&#12394;&#12356;</strong><p>&#28961;&#26009;&#25237;&#31295;&#12363;&#12425;&#23567;&#12373;&#12394;&#26377;&#26009;&#12486;&#12531;&#12503;&#12524;&#12408;&#33258;&#28982;&#12395;&#12388;&#12394;&#12370;&#12414;&#12377;&#12290;</p></div>
+    </section>
+
+    <section class="preview-flow">
+      <p class="section-kicker">&#20351;&#12358;&#12392;&#20309;&#12364;&#20986;&#12427;&#12363;</p>
+      <h2>10&#20998;&#12391;&#12289;&#12513;&#12514;&#12434;3&#12388;&#12398;&#20986;&#21147;&#12395;&#20998;&#12369;&#12427;</h2>
+      <div class="preview-grid">
+        <div class="preview-step"><span>1</span><strong>&#35501;&#32773;&#12398;&#22256;&#12426;&#12372;&#12392;&#12395;&#22793;&#25563;</strong><p>&#33258;&#20998;&#29992;&#12398;&#12513;&#12514;&#12434;&#12289;&#20154;&#12395;&#20253;&#12431;&#12427;&#35542;&#28857;&#12395;&#20998;&#12369;&#12414;&#12377;&#12290;</p></div>
+        <div class="preview-step"><span>2</span><strong>&#28961;&#26009;&#25237;&#31295;&#12392;&#30701;&#25991;&#12395;&#20998;&#35299;</strong><p>&#38263;&#12417;&#12398;&#25237;&#31295;&#12392;X / Threads&#21521;&#12369;&#12398;&#30701;&#12356;&#25991;&#12434;&#20316;&#12426;&#12414;&#12377;&#12290;</p></div>
+        <div class="preview-step"><span>3</span><strong>&#26368;&#24460;&#12395;&#23567;&#12373;&#12394;&#36009;&#22770;&#23566;&#32218;</strong><p>&#25237;&#31295;&#12398;&#20808;&#12395;&#32622;&#12367;&#21830;&#21697;&#35498;&#26126;&#12398;&#20882;&#38957;&#25991;&#12414;&#12391;&#20316;&#12426;&#12414;&#12377;&#12290;</p></div>
+      </div>
     </section>
 
     <section class="decision">
