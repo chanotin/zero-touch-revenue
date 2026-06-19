@@ -203,6 +203,41 @@
       font-size: 13px;
       font-weight: 800;
     }
+    .compare-grid, .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .panel, .faq, .final-cta {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .panel h2, .faq h3, .final-cta h2 {
+      margin-top: 0;
+    }
+    .panel.before {
+      background: var(--danger-soft);
+    }
+    .panel.after {
+      background: var(--accent-soft);
+    }
+    .panel ul, .faq p {
+      margin-bottom: 0;
+    }
+    .final-cta {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(23, 32, 46, 0.07);
+    }
+    .final-cta p {
+      margin: 0;
+      color: var(--muted);
+    }
     .date {
       color: var(--accent);
       font-size: 13px;
@@ -284,6 +319,9 @@
       .value-grid {
         grid-template-columns: 1fr;
       }
+      .compare-grid, .faq-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -291,7 +329,7 @@
   <header>
     <div class="wrap">
       <h1>Small Offer Lab</h1>
-      <p class="lead">小さなデジタル商品の試作置き場. Updated 2026-06-19 17:18:47.</p>
+      <p class="lead">小さなデジタル商品の試作置き場. Updated 2026-06-19 17:27:06.</p>
     </div>
   </header>
   <main class="wrap">
