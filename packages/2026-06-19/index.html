@@ -257,6 +257,51 @@
       color: #394455;
       font-size: 15px;
     }
+    .catalog-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgba(23, 32, 46, 0.06);
+    }
+    .catalog-hero h2 {
+      margin: 0 0 6px;
+      font-size: clamp(24px, 3vw, 34px);
+    }
+    .catalog-hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .catalog-note {
+      min-width: 170px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+      text-align: center;
+    }
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    .product-badges span {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #7a520e;
+      font-size: 12px;
+      font-weight: 800;
+    }
     .value-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -602,6 +647,9 @@
         padding: 20px;
       }
       .card {
+        grid-template-columns: 1fr;
+      }
+      .catalog-hero {
         grid-template-columns: 1fr;
       }
       .value-grid {

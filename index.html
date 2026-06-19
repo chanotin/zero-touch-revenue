@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Small Offer Lab</title>
-  <meta name="description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:14:57.">
+  <meta name="description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:18:58.">
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Small Offer Lab">
   <meta property="og:title" content="Small Offer Lab">
-  <meta property="og:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:14:57.">
+  <meta property="og:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:18:58.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Small Offer Lab">
-  <meta name="twitter:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:14:57.">
+  <meta name="twitter:description" content="小さなデジタル商品を試す場所. Updated 2026-06-19 18:18:58.">
   <link rel="canonical" href="https://small-offer-lab.vercel.app/">
   <meta property="og:url" content="https://small-offer-lab.vercel.app/">
   <meta property="og:image" content="https://small-offer-lab.vercel.app/assets/packages/2026-06-19/cover.png">
@@ -237,6 +237,51 @@
       margin: 0;
       color: #394455;
       font-size: 15px;
+    }
+    .catalog-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgba(23, 32, 46, 0.06);
+    }
+    .catalog-hero h2 {
+      margin: 0 0 6px;
+      font-size: clamp(24px, 3vw, 34px);
+    }
+    .catalog-hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .catalog-note {
+      min-width: 170px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+      text-align: center;
+    }
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    .product-badges span {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #7a520e;
+      font-size: 12px;
+      font-weight: 800;
     }
     .value-grid {
       display: grid;
@@ -585,6 +630,9 @@
       .card {
         grid-template-columns: 1fr;
       }
+      .catalog-hero {
+        grid-template-columns: 1fr;
+      }
       .value-grid {
         grid-template-columns: 1fr;
       }
@@ -615,7 +663,7 @@
     <div class="wrap">
       <div class="brand-block">
         <h1>Small Offer Lab</h1>
-        <p class="lead">小さなデジタル商品を試す場所. Updated 2026-06-19 18:14:57.</p>
+        <p class="lead">小さなデジタル商品を試す場所. Updated 2026-06-19 18:18:58.</p>
       </div>
       <nav class="nav-links" aria-label="Page sections">
         <a href="#contents">&#20869;&#23481;</a>
@@ -627,6 +675,14 @@
     </div>
   </header>
   <main class="wrap">
+    <section class="catalog-hero">
+      <div>
+        <p class="section-kicker">Small Offer Lab</p>
+        <h2>&#23567;&#12373;&#12367;&#35430;&#12379;&#12427;&#12487;&#12472;&#12479;&#12523;&#21830;&#21697;&#26842;</h2>
+        <p>&#12414;&#12378;&#12399;980&#20870;&#12398;&#23567;&#12373;&#12394;&#12486;&#12531;&#12503;&#12524;&#12391;&#12289;&#12513;&#12514;&#12434;&#25237;&#31295;&#12392;&#36009;&#22770;&#23566;&#32218;&#12395;&#22793;&#12360;&#12427;&#23455;&#39443;&#12363;&#12425;&#22987;&#12417;&#12414;&#12377;&#12290;</p>
+      </div>
+      <div class="catalog-note">&#20844;&#38283;&#20013;&#65306;1&#20214;</div>
+    </section>
     <section class="grid">
       <article class="card">
         <div class="cover-wrap"><img class="cover" src="assets/packages/2026-06-19/cover.png" alt=""></div>
@@ -638,6 +694,11 @@
             <span>980円</span>
           </div>
           <p class="card-lead">&#27598;&#22238;&#12476;&#12525;&#12363;&#12425;&#26360;&#12367;&#37325;&#12373;&#12434;&#12289;&#25237;&#31295;&#12539;&#30701;&#25991;&#12539;&#36009;&#22770;&#23566;&#32218;&#12395;&#20998;&#12369;&#12390;&#36605;&#12367;&#12377;&#12427;&#23567;&#12373;&#12394;&#12486;&#12531;&#12503;&#12524;&#12391;&#12377;&#12290;</p>
+          <div class="product-badges">
+            <span>&#21363;&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;</span>
+            <span>AI&#12481;&#12515;&#12483;&#12488;&#29992;</span>
+            <span>&#21021;&#22238;&#12398;1&#26412;&#21521;&#12369;</span>
+          </div>
           <div class="links">
             <a class="button" href="packages/2026-06-19/index.html">&#35443;&#32048;&#12434;&#35211;&#12427;</a>
             <a class="button" href="https://small-offer-lab.booth.pm/items/8525311">購入する</a>
