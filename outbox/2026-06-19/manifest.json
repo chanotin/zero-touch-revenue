@@ -1,0 +1,14 @@
+﻿{
+    "date":  "2026-06-19",
+    "id":  "content-repurpose-mini",
+    "theme":  "一つのメモから投稿を複数作る省力化",
+    "buyer":  "発信したいが毎回書くのが重い人",
+    "product":  "メモから記事、短文投稿、販売導線に変えるプロンプト集",
+    "price_yen":  980,
+    "files":  [
+                  "free_post.md",
+                  "product.md",
+                  "sales_page.md",
+                  "social_posts.md"
+              ]
+}
